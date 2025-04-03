@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Style.css'
+import './style.css'
 
 function Usuarios() {
 

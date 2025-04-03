@@ -15,7 +15,12 @@ function App() {
     <Router>
       <Menu />
       <Routes>
-
+        <Route path="/" element={<Aleatorios />} />
+        <Route path="/Detalle" element={<Detalle />} />
+        <Route path="/Favoritos" element={<Favoritos />} />
+        <Route path="/Listar" element={<Listar />} />
+        <Route path="/Original" element={<Original />} />
+        <Route path="/Usuarios" element={<Usuarios />} />        
       </Routes>
     </Router>
   
