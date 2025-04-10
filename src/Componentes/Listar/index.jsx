@@ -26,9 +26,13 @@ function Listar() {
     obtenerDatos();
   }, [tipoSeleccionado]);
 
+  const handleTipoChange = (tipo) => {
+    setTipoSeleccionado(tipo);
+  };
+
   return (
     <>
-    <Filtro />
+    <Filtro onTipoChange={handleTipoChange} />
       <section className='c-lista'>
 
 {data.map((pokemon, index) => (
