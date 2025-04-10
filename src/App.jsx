@@ -16,7 +16,7 @@ function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<Aleatorios />} />
-        <Route path="/Detalle" element={<Detalle />} />
+        <Route path="/Detalle/:name" element={<Detalle />} />
         <Route path="/Favoritos" element={<Favoritos />} />
         <Route path="/Listar" element={<Listar />} />
         <Route path="/Original" element={<Original />} />
