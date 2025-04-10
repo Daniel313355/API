@@ -25,21 +25,8 @@ function Detalle() {
         <p>{datapoke.name}</p>
         <p>{datapoke.id}</p>
         <p>Altura: {datapoke.height/ 10} m / Peso: {datapoke.weight/ 10} km</p>
-
-
-        <button onClick={toggleFavorito}>
-          {esFavorito ? '❤️' : '🤍'}
-        </button>
-
-    
     </div>
-    <>
-      <h1>{datapoke.name}</h1>
-      <p>{datapoke.id}</p>
-      <p>{datapoke.weight}</p>
-      <p>{datapoke.height}</p>
-      <img src= https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png
-    </>
+  
   )
 }
 
