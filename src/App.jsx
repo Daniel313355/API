@@ -10,15 +10,22 @@ import Original from './Componentes/Original'
 import Usuarios from './Componentes/Usuarios'
 
 function App() {
+const [favoritos, setFavoritos] = useState([]);
 
+  const agregarAFavoritos = (pokemon) => {
+    // Evitar duplicados
+    if (!favoritos.some((fav) => fav.name === pokemon.name)) {
+      setFavoritos((prev) => [...prev, pokemon]);
+    }
+  };
   return (
     <Router>
       <Menu />
       <Routes>
         <Route path="/" element={<Aleatorios />} />
         <Route path="/Detalle/:name" element={<Detalle />} />
-        <Route path="/Favoritos" element={<Favoritos />} />
-        <Route path="/Listar" element={<Listar />} />
+        <Route path="/Favoritos" element={<Favoritos favoritos={favoritos} />} />
+        <Route path="/Listar" element={<Listar agregarAFavoritos={agregarAFavoritos} />} />
         <Route path="/Original" element={<Original />} />
         <Route path="/Usuarios" element={<Usuarios />} />        
       </Routes>

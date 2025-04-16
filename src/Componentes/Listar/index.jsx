@@ -3,7 +3,7 @@ import './style.css'
 import { useNavigate } from 'react-router-dom';
 import Filtro from '../Filtros';
 
-function Listar() {
+function Listar({ agregarAFavoritos }) {
 
     const [data, setData] = useState([]);
     const [busqueda, setBusqueda] = useState('');
@@ -20,7 +20,7 @@ function Listar() {
       } else {
         const res = await fetch(`https://pokeapi.co/api/v2/type/${tipoSeleccionado}`);
         const json = await res.json();
-        const listaFiltrada = json.pokemon.map(p => p.pokemon);
+        const listaFiltrada = json.pokemon.map((p) => p.pokemon);
         setData(listaFiltrada);
       }
     };
@@ -68,6 +68,10 @@ function Listar() {
           alt={`Pokémon ${pokemon.name}`} width='auto' height='60' loading='lazy'
         />
     <p>{pokemon.name}</p>
+    <button onClick={() => agregarAFavoritos({ name: pokemon.name, id: pokemon.url.split('/')[6] })}>
+              Agregar a Favoritos
+            </button>
+            <button onClick={() => navigate(`/Detalle/${pokemon.name}`)}>Ver Detalle</button>
   </div>
 ))}
 </section>
