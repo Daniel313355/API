@@ -12,7 +12,7 @@ function Favoritos({ favoritos })  {
           <img
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
             alt={pokemon.name}
-            width="50"
+            width="100"
           />
           <p>{pokemon.name}</p>
         </li>

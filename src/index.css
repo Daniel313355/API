@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(95, 233, 221);
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+button {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+}

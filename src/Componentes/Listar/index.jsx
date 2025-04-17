@@ -65,7 +65,7 @@ function Listar({ agregarAFavoritos }) {
   key={index}>
     <p>{pokemon.url.split("/")[6]}</p>
     <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.url.split("/")[6]}.png`} 
-          alt={`Pokémon ${pokemon.name}`} width='auto' height='60' loading='lazy'
+          alt={`Pokémon ${pokemon.name}`} width='auto' height='100' loading='lazy'
         />
     <p>{pokemon.name}</p>
     <button onClick={() => agregarAFavoritos({ name: pokemon.name, id: pokemon.url.split('/')[6] })}>
